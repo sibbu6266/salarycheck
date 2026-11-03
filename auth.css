@@ -1,0 +1,134 @@
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e7e3ff, #e6f6ff, #ffe5f1, #eee9ff);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+.auth-page::before,
+.auth-page::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(3px);
+    opacity: .4;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+.auth-page::before {
+    background: linear-gradient(135deg, #7657ff, #c5b8ff);
+    top: -100px;
+    left: -100px;
+}
+
+.auth-page::after {
+    background: linear-gradient(135deg, #ff5ca8, #ffb3d2);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 2s;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,.9);
+    box-shadow: 0 25px 80px rgba(75,55,150,.16);
+    animation: fadeUp .7s ease;
+    transition: .4s;
+}
+
+.auth-card:hover {
+    box-shadow: 0 30px 90px rgba(118,87,255,.22);
+    transform: translateY(-3px);
+}
+
+.auth-card h1 {
+    font-size: 29px;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.auth-card form {
+    margin-top: 20px;
+}
+
+.password-box {
+    display: flex;
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 65px;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #7657ff;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.form-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 20px;
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+.remember input {
+    width: auto;
+    accent-color: #7657ff;
+}
+
+.bottom-text {
+    text-align: center;
+    margin-top: 23px;
+    font-size: 13px;
+}
+
+.bottom-text a {
+    font-weight: 800;
+}
+
+.message {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media(max-width:480px) {
+    .auth-card {
+        padding: 28px 20px;
+    }
+}
