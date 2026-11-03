@@ -1,17 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | ExpenseFlow</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body class="dashboard-page">
 
     <aside class="sidebar">
         <div class="brand">
-            <img src="../images/logo.svg" alt="Logo">
+            <img src="logo.svg" alt="Logo">
             <h2>ExpenseFlow</h2>
         </div>
 
@@ -21,15 +23,19 @@
             <a href="profile.html">◉ My Profile</a>
         </nav>
 
-        <button class="logout-btn" id="logoutBtn">↪ Logout</button>
+        <button class="logout-btn" id="logoutBtn">
+            ↪ Logout
+        </button>
     </aside>
 
     <main class="main-content">
+
         <header class="topbar">
             <div>
                 <h1>Dashboard</h1>
                 <p class="muted">Manage your money in one place.</p>
             </div>
+
             <div class="user-info">
                 <span id="welcomeName">Welcome!</span>
                 <div class="avatar" id="userAvatar">U</div>
@@ -37,6 +43,7 @@
         </header>
 
         <section class="summary-grid">
+
             <div class="summary-card income-card">
                 <p>Total Income</p>
                 <h2 id="totalIncome">₹0</h2>
@@ -54,18 +61,24 @@
                 <h2 id="totalBalance">₹0</h2>
                 <span>Your remaining money</span>
             </div>
+
         </section>
 
         <section class="content-grid">
+
             <div class="panel">
                 <h2>Add Transaction</h2>
 
                 <form id="transactionForm">
+
                     <label>Transaction Title</label>
-                    <input type="text" id="transactionTitle" placeholder="e.g. Monthly Salary" required>
+                    <input type="text" id="transactionTitle"
+                           placeholder="e.g. Monthly Salary" required>
 
                     <label>Amount (₹)</label>
-                    <input type="number" id="transactionAmount" placeholder="Enter amount" min="1" step="0.01" required>
+                    <input type="number" id="transactionAmount"
+                           placeholder="Enter amount"
+                           min="1" step="0.01" required>
 
                     <label>Transaction Type</label>
                     <select id="transactionType" required>
@@ -76,33 +89,45 @@
                     <label>Date</label>
                     <input type="date" id="transactionDate" required>
 
-                    <button type="submit" class="primary-btn">Add Transaction</button>
+                    <button type="submit" class="primary-btn">
+                        Add Transaction
+                    </button>
+
                 </form>
             </div>
 
             <div class="panel">
                 <h2>Income vs Expense</h2>
+
                 <div class="chart-row">
                     <span>Income</span>
+
                     <div class="bar-bg">
                         <div id="incomeBar" class="bar income-bar"></div>
                     </div>
+
                     <strong id="incomePercent">0%</strong>
                 </div>
 
                 <div class="chart-row">
                     <span>Expense</span>
+
                     <div class="bar-bg">
                         <div id="expenseBar" class="bar expense-bar"></div>
                     </div>
+
                     <strong id="expensePercent">0%</strong>
                 </div>
 
-                <p class="muted chart-note">Your income and expenses are calculated from your transactions.</p>
+                <p class="muted chart-note">
+                    Your income and expenses are calculated from your transactions.
+                </p>
             </div>
+
         </section>
 
         <section class="panel transactions-panel" id="transactions">
+
             <div class="section-heading">
                 <div>
                     <h2>Recent Transactions</h2>
@@ -121,14 +146,19 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+
                     <tbody id="transactionList"></tbody>
                 </table>
             </div>
 
-            <p id="emptyMessage" class="empty-message">No transactions yet. Add your first transaction!</p>
+            <p id="emptyMessage" class="empty-message">
+                No transactions yet. Add your first transaction!
+            </p>
+
         </section>
+
     </main>
 
-    <script src="../js/dashboard.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
